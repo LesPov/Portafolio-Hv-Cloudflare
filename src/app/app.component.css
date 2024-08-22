@@ -1,0 +1,165 @@
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    z-index: -1;
+}
+
+.overlay::before {
+    content: "";
+    position: fixed;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: linear-gradient(#00ffc0, #ff00cf);
+    transform: translate(-45px, -30px);
+    z-index: -2;
+
+}
+
+
+.overlay::after {
+    content: "";
+    position: fixed;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    background: linear-gradient(#0815ff, #fc0000);
+    transform: translate(-50px, 450px);
+    z-index: -2;
+
+}
+
+.ball_1 {
+    height: 100px;
+    width: 100px;
+    border-radius: 60%;
+    background: #00ff31;
+    transform: translate(250px, 350px);
+    position: fixed;
+    z-index: -2;
+
+}
+
+.ball_2 {
+    height: 180px;
+    width: 180px;
+    border-radius: 60%;
+    background: linear-gradient(#08ffc69e, #0010ff);
+    transform: translate(300px, 35px);
+    position: fixed;
+    z-index: -2;
+
+}
+
+.ball_3 {
+    height: 180px;
+    width: 180px;
+    border-radius: 60%;
+    background: linear-gradient(#c20000e3, #fce600);
+    transform: translate(270px, 631px);
+    position: fixed;
+    z-index: -2;
+
+}
+
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: 70px;
+    opacity: .8;
+    border: 1px solid var(--border-interior);
+    box-shadow: 0px 0px 6px 2px var(--border-shadow-interior);
+    background: var(--color-background-header-sidenav);
+    padding: 0.3rem .3rem;
+    border-radius: .4rem;
+    z-index: 1000;
+    transition: .4s;
+    animation: up-animation 1s ease-in-out forwards;
+}
+
+/* Hover state */
+.scrollup:hover {
+    background-color: var(--color-azul-neon);
+}
+
+/* Nueva clase para el estado desactivado */
+.scrollup--inactive:hover {
+    background-color: var(--color-background-header-sidenav);
+    /* Sin cambio de color */
+    bottom: 70px;
+    /* Sin cambio de posición */
+}
+
+/* Estilo del ícono */
+.scrollup__icon {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Animación de rebote */
+@keyframes bounce-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estilo cuando se hace clic */
+.scrollup.clicked {
+    animation: bounce-animation 0.6s ease-in-out;
+}
+
+@media screen and (min-width:1366px) {
+
+    .overlay::before {
+        height: 300px;
+        width: 300px;
+        transform: translate(303px, -146px);
+    }
+
+    .ball_1 {
+        height: 150px;
+        width: 150px;
+        transform: translate(850px, 176px);
+    }
+
+    .overlay::after {
+        transform: translate(174px, 352px);
+
+    }
+
+    .ball_2 {
+        height: 190px;
+        width: 190px;
+        transform: translate(1129px, 35px);
+
+    }
+
+    .ball_3 {
+
+        transform: translate(1212px, 345px);
+
+
+    }
+
+    .scrollup {
+
+        bottom: 15px;
+
+    }
+
+    .scrollup:hover {
+        bottom: 20px;
+    }
+}

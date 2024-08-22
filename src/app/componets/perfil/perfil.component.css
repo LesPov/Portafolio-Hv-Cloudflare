@@ -1,0 +1,225 @@
+.perfil {
+    width: auto;
+    height: auto;
+}
+
+.container {
+    background: var(--color-background-container);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-interior);
+    margin: 10px;
+    position: relative;
+    z-index: 5;
+    top: 115px;
+    left: 0;
+    display: flex;
+    width: 95%;
+    height: 95%;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0px 0px 6px 2px var(--border-shadow-interior);
+    padding: 20px;
+}
+
+
+.imagen {
+    background: transparent;
+    background-size: cover;
+    margin: 5px;
+    z-index: 2;
+    width: 290px;
+    border-radius: 20px;
+    height: 310px;
+    position: relative;
+    box-shadow: inset 0px 0px 20px -5px var(--border-shadow-interior-img);
+    border: 1px solid var(--border-shadow-interior-img);
+}
+
+
+.imagen img {
+    width: 275px;
+    height: 320px;
+    border-radius: 15px;
+    margin-left: 7px;
+    margin-top: -21px;
+    transition: .9s;
+
+}
+
+.imagen img:hover {
+    transform: scale(0.5) translateY(-80px) translateX(35px);
+    transition: .9s;
+    box-shadow: none;
+
+}
+
+
+h1 {
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: var(--color-white-text);
+}
+
+
+
+
+
+/* //////// */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 16px;
+}
+
+.cardperson {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.cardperson i {
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 1px solid var(--sombra-cards-personales);
+    transition: .4s ease;
+    box-shadow: inset 0px 0px 14px -5px var(--sombra-cards-personales);
+    color: var(--color-cards-personales);
+    background: var(--backgraund-cards-personales);
+
+}
+
+.cardperson i:hover {
+    transform: scale(1.1);
+    background: var(--backgraund-hover-negro-cards-social);
+    color: var(--color-cards-personales);
+    border: 1px solid var(--sombra-cards-personales);
+    box-shadow: inset 0px 0px 2px 2px var(--sombra-cards-personales-hover);
+
+}
+
+
+.info_person {
+    width: 200px;
+    margin-left: 10px;
+}
+
+.info_person h6 {
+    font-size: 14px;
+    color: var(--color-white-text);
+    font-weight: 600;
+}
+
+.info_person p {
+    font-size: 14px;
+    margin-top: 3px;
+    color: var(--color-grisclaro-text);
+    font-weight: 500;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    padding: 18px;
+    border-radius: 5px;
+    margin: 30px 0 15px 0;
+    cursor: pointer;
+    font-weight: 600;
+    border: 1px solid var(--color-naranga-neon);
+    box-shadow: inset 0px 0px 20px -8px var(--color-naranga-neon);
+
+    transition: 0.5s ease;
+}
+
+.buttons:hover {
+    transform: scale(1.1);
+    box-shadow: inset 0px 0px 6px 2px var(--color-naranga-neon);
+
+}
+
+.buttons .button_flex {
+    color: var(--color-white-text);
+    text-decoration: none;
+}
+
+
+@media screen and (min-width:1366px) {
+
+    .container {
+        margin: 10px;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 10px;
+        width: 20rem;
+        height: 96vh;
+        padding: 10px;
+    }
+
+
+    .imagen {
+        width: 260px;
+        height: 290px;
+        overflow: hidden;
+
+    }
+
+
+    .imagen img {
+        width: 285px;
+        height: 300px;
+        margin-left: -30px;
+        transform: rotate(357deg);
+        margin-top: -14px;
+
+
+    }
+
+   
+
+
+    h1 {
+
+        margin-bottom: 5px;
+        color: var(--color-white-text);
+    }
+
+    .cardperson i {
+        font-size: 20px;
+        transition: .3s;
+
+    }
+
+
+
+
+    .info_person p {
+        font-size: 13px;
+        font-weight: 400;
+
+    }
+
+    .buttons {
+        padding: 10px;
+        margin: 15px 0 15px 0;
+
+        transition: 0.5s ease;
+    }
+
+ 
+    .buttons .button_flex {
+        color: var(--color-white-text);
+        text-decoration: none;
+    }
+
+}

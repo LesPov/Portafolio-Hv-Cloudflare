@@ -1,0 +1,29 @@
+.body {
+    width: 95%;
+    min-height: 60vh;
+    margin: 10px;
+    margin-bottom: 250px;
+    z-index: 100;
+    position: relative;
+    top: 124px;
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-interior);
+    transition: all .5s ease;
+    background: var(--color-background-container);
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 6px 2px var(--border-shadow-interior);
+
+}
+
+@media screen and (min-width:1366px) {
+    .body {
+        width: calc(100% - 25rem);
+        min-height: 96vh;
+        margin-left: 23rem;
+        margin-bottom: 4rem;
+        z-index: 100;
+        top: 0;
+
+    }
+
+}

@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    list-style: none;
+}
+
+body {
+    background: #000;
+
+}
+
+:root {
+    /* ///header//// */
+    --color-background-container: hsla(204, 100%, 3%, 0.718);
+    --color-background-header-sidenav: hsl(204deg 100% 3%);
+    --color-azul-neon: hsl(186, 100%, 50%);
+    --color-borde-azul-redes: hsl(186, 100%, 50%);
+    --border-shadow-interior: hsl(204deg 100% 18%);
+
+    --border-interior: hsl(186deg 100% 38% / 89%);
+    --color-white-text: #fff;
+    --color-black-text: #000;
+    --color-gray: #737270;
+    --color-grisclaro-text: #ccc;
+    --border-shadow-interior-img: hsl(186, 100%, 50%);
+    --backgraund-hover-negro-cards-social: hsl(0, 100%, 0%);
+    --backgraund-cards-personales: #00000000;
+    --sombra-cards-personales: hsl(186, 100%, 50%);
+    --color-cards-personales: hsl(0, 0%, 100%);
+    --backgraund-hover-negro-cards-social: hsl(0, 100%, 0%);
+    --backgraund-hover-blanco-text-cards-social: hsl(0, 0%, 100%);
+    --sombra-cards-personales-hover: hsl(186, 100%, 50%);
+    --color-naranga-neon: hsl(25, 100%, 50%);
+    --color-botton-contacto: hsla(25, 100%, 50%, 0.332);
+
+
+    /* ///////////////////////about/////////////// */
+    --color-texto-title: hsl(0, 0%, 100%);
+    --color-texto-blanco: hsl(0, 0%, 67%);
+    --color-b1: linear-gradient(315deg, #9b0062, #2b001bd5, transparent);
+    --color-b2: linear-gradient(315deg, #77af00, #263801db, transparent);
+
+}
+
+
+
+/* //////////// Dark Tema ///////////////////// */
+body.dark-theme {
+    --color-background-container: hsl(0deg 0% 100% / 10%);
+    --color-background-header-sidenav: hsl(0, 0%, 0%);
+    --color-azul-neon: hsl(186, 100%, 50%);
+    --border-shadow-interior: hsl(0deg 0% 100% / 29%);
+    --border-interior: #ccc;
+
+    --border-shadow-interior-img: #000;
+    --color-borde-azul-redes: #000000;
+    --color-white-text: #fff;
+    --color-black-text: #000;
+    --color-gray: #737270;
+    --color-grisclaro-text: #ccc;
+    --backgraund-cards-personales: #000;
+    --sombra-cards-personales: #ffffff;
+    --color-cards-personales: hsl(0, 0%, 100%);
+    --backgraund-hover-negro-cards-social: #000;
+    --sombra-cards-personales-hover: hsl(0, 0%, 100%);
+
+
+
+
+    /* //////////////header//////////// */
+
+
+    /* ///////////////////////about/////////////// */
+
+}
