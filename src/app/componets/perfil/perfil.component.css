@@ -32,8 +32,8 @@
     border-radius: 20px;
     height: 310px;
     position: relative;
-    box-shadow: inset 0px 0px 20px -5px var(--border-shadow-interior-img);
-    border: 1px solid var(--border-shadow-interior-img);
+    box-shadow: inset 0px 0px 6px 2px var(--border-shadow-interior-img);
+    border: 1px solid var(--border-interior);
 }
 
 
