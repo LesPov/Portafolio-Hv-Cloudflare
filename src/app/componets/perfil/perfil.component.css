@@ -47,12 +47,7 @@
 
 }
 
-.imagen img:hover {
-    transform: scale(0.5) translateY(-80px) translateX(35px);
-    transition: .9s;
-    box-shadow: none;
 
-}
 
 
 h1 {
