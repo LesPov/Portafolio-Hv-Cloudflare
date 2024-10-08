@@ -306,7 +306,7 @@ h2 {
 .star {
     display: flex;
     background: var(--color-black-text);
-    border: 0.5px solid var(--color-white-text);
+    border: 1px solid var(--color-white-text);
     width: 30px;
     height: 30px;
     justify-content: center;
@@ -325,7 +325,7 @@ h2 {
 .puntos {
     display: flex;
     background: var(--color-black-text);
-    border: 0.5px solid var(--color-white-text);
+    border: 1px solid var(--color-white-text);
     width: 80px;
     height: 25px;
     justify-content: center;
