@@ -20,9 +20,9 @@ body {
     --color-background-header-sidenav: hsl(204deg 100% 3%);
     --color-azul-neon: hsl(186, 100%, 50%);
     --color-borde-azul-redes: hsl(186, 100%, 50%);
-    --border-shadow-interior: hsl(204deg 100% 18%);
+    --border-shadow-interior: hsl(204, 100%, 35%);
 
-    --border-interior: hsl(186deg 100% 38% / 89%);
+    --border-interior: hsla(186, 97%, 48%, 0.89);
     --color-white-text: #fff;
     --color-black-text: #000;
     --color-gray: #737270;
