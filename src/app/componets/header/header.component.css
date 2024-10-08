@@ -28,13 +28,18 @@
 
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     position: absolute;
 }
 
 .titulo {
+    position: relative;
     display: flex;
-    gap: 170px;
+    gap: 180px;
+    height: auto;
+    left: -13px;
+    width: auto;
+    top: -12px;
     align-items: center;
     justify-content: center;
 }
