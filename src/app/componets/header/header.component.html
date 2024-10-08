@@ -19,20 +19,17 @@
           <i class="ri-github-fill"></i>
         </a>
       </div>
+        <div class="nav_btns_stars">
+          <!-- Al hacer clic en la estrella, se llama a redirectToRepo() -->
+          <div class="star" id="nav_star" (click)="redirectToRepo()">
+            <i class='bx bxs-star change-theme'></i>
+          </div>
+          <div class="puntos">
+            <p>Stars<span class="star-count">{{ starCount }}</span></p>
+          </div>
+        </div>
     </div>
+    
   </div>
 
-  <div class="pointerstar">
-    <div class="status">
-      <div class="nav_btns_stars">
-        <!-- Al hacer clic en la estrella, se llama a redirectToRepo() -->
-        <div class="star" id="nav_star" (click)="redirectToRepo()">
-          <i class='bx bxs-star change-theme'></i>
-        </div>
-        <div class="puntos">
-          <p>Stars<span class="star-count">{{ starCount }}</span></p>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
