@@ -126,19 +126,19 @@ img {
 
 .card.a2 {
   grid-column: 1 / 7;
-  grid-row: 8 / 10;
+  grid-row: 8 / 11;
   border-radius: 20px;
 }
 
 .card.a3 {
   grid-column: 1 / 7;
-  grid-row: 10 / 14;
+  grid-row: 11 / 15;
   border-radius: 20px;
 }
 
 .card.a4 {
   grid-column: 1 / 7;
-  grid-row: 14 / 18;
+  grid-row: 15 / 19;
   border-radius: 20px;
   background: #ffffff14;
   border: 2px dashed #fff;

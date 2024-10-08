@@ -442,6 +442,7 @@ input:checked+label .description {
     margin-top: 25px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    border-bottom: 2px solid var(--border-interior);
 
 }
 
