@@ -115,6 +115,7 @@
     align-items: center;
     align-content: center;
     padding: 0px;
+    content-visibility: auto;
 }
 
 
@@ -831,10 +832,12 @@ img {
 .container3 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 80px;
     margin-top: 50px;
     margin-bottom: 50px;
+    content-visibility: auto;
+
 }
 
 .cards1 {
