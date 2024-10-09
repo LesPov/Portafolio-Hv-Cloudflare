@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   // Inicia la actualización periódica cada 20 segundos
   startPeriodicUpdate() {
-    this.updateSubscription = interval(20000) // Actualiza cada 20 segundos
+    this.updateSubscription = interval(5000) // Actualiza cada 20 segundos
       .pipe(
         startWith(0),
         switchMap(() => this.fetchGitHubStats())
@@ -42,12 +42,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
         (data) => {
           const previousStarCount = this.starCount;
           this.starCount = data.stargazers_count;
-
-          // Si las estrellas han aumentado, muestra un mensaje de éxito
-          if (previousStarCount < this.starCount) {
-            this.toastr.success('Gracias por darle estrella al repositorio. Compartalo.');
-          }
-
           this.errorMessage = '';
         },
         (error) => {
