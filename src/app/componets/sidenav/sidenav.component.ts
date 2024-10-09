@@ -1,17 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-// import { ToastrService } from 'ngx-toastr';
-import { navbarData } from './nav-data';
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { navbarData } from './nav-data';
+
+interface Song {
+  bg: string;
+  artist: string;
+  songName: string;
+  files: {
+    song: string;
+    cover: string;
+  };
+}
 
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [CommonModule, RouterModule,],
+  imports: [CommonModule, RouterModule, HttpClientModule],
   templateUrl: './sidenav.component.html',
-  styleUrl: './sidenav.component.css'
-  
+  styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
   private darkTheme = 'dark-theme';
@@ -20,9 +29,13 @@ export class SidenavComponent implements OnInit {
   navMenu: HTMLElement | null = null;
   navToggle: HTMLElement | null = null;
   navClose: HTMLElement | null = null;
-  constructor(private toastr: ToastrService) {
+  songs: Song[] = [];
+  currentSongIndex: number = 0;
+  isPlaying: boolean = false;
+  audioPlayer!: HTMLAudioElement;
 
-  }
+  constructor(private toastr: ToastrService, private http: HttpClient) { }
+
   ngOnInit(): void {
     const selectedTheme = this.isWindowAvailable() ? localStorage.getItem('selected-theme') : null;
     const selectedIcon = this.isWindowAvailable() ? localStorage.getItem('selected-icon') : null;
@@ -30,6 +43,7 @@ export class SidenavComponent implements OnInit {
     if (selectedTheme) {
       this.applyTheme(selectedTheme, selectedIcon || '');
     }
+
     if (typeof document !== 'undefined') {
       this.navMenu = document.getElementById('nav-menu');
       this.navToggle = document.getElementById('nav-toggle');
@@ -42,13 +56,15 @@ export class SidenavComponent implements OnInit {
       if (this.navClose) {
         this.navClose.addEventListener('click', this.hideMenu.bind(this));
       }
-
-
     }
+
+    this.loadSongs(); // Cargar canciones al iniciar
   }
+
   showsuccess(): void {
-    this.toastr.warning('En proximas actualizaciones se agregara.', 'Warning');
+    this.toastr.warning('En próximas actualizaciones se agregará.', 'Warning');
   }
+
   isWindowAvailable(): boolean {
     return typeof window !== 'undefined';
   }
@@ -77,7 +93,40 @@ export class SidenavComponent implements OnInit {
     }
   }
 
+  // Métodos relacionados con la música
+  loadSongs(): void {
+    this.http.get<{ songs: Song[] }>('https://raw.githubusercontent.com/LesPov/musica/main/music-info.json')
+      .subscribe(
+        data => {
+          this.songs = data.songs;
+          this.audioPlayer = document.querySelector('audio') as HTMLAudioElement;
+        },
+        error => console.error('Error al cargar las canciones:', error)
+      );
+  }
 
+  togglePlayer(): void {
+    if (this.songs.length === 0) return;
+
+    if (this.isPlaying) {
+      this.audioPlayer.pause();
+      this.isPlaying = false;
+    } else {
+      this.playRandomSong();
+    }
+  }
+
+  playRandomSong(): void {
+    const randomIndex = Math.floor(Math.random() * this.songs.length);
+    this.currentSongIndex = randomIndex;
+    this.audioPlayer.src = this.songs[this.currentSongIndex].files.song;
+    this.audioPlayer.play();
+    this.isPlaying = true;
+  }
+
+  onSongEnd(): void {
+    this.playRandomSong();
+  }
 
   private getCurrentTheme(): string {
     return document.body.classList.contains(this.darkTheme) ? 'dark' : 'light';

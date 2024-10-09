@@ -34,6 +34,26 @@
     gap: 1.5rem;
 }
 
+.player-icon i {
+    font-size: 1.75rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.player-icon i:hover {
+    color: #00ccff;
+    /* Neon blue color on hover */
+}
+
+.player-icon .bx-pause {
+    color: #00ccff;
+    /* Neon blue color when playing (pause icon) */
+}
+
+.player-icon .bx-music {
+    color: #fff;
+    /* Default color for the music note icon */
+}
 
 
 
@@ -186,8 +206,8 @@
         position: static;
         border: none;
         box-shadow: none;
-        background:none;
-      
+        background: none;
+
     }
 
     .container {
@@ -225,9 +245,9 @@
         z-index: 1;
         justify-content: center;
         align-items: center;
-    
+
     }
-    
+
 
     .nav_logo:hover {
         color: #f66f00;
@@ -291,12 +311,12 @@
         display: flex;
         z-index: 1000;
         align-items: center;
+        gap: 15px;
     }
 
     .change-theme {
         font-size: 1.25rem;
         color: var(--title-color);
-        margin-right: 1rem;
         cursor: pointer;
     }
 

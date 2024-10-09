@@ -19,7 +19,14 @@
         <div class="nav_btns">
             <!-- ////////////////////thema negro///////////// -->
             <i class="uil uil-moon change-theme" id="theme-button" (click)="toggleTheme()"></i>
-            <i class='bx bx-volume-full change-theme' id="theme-button" (click)="showsuccess()"></i>
+            <!-- Reproductor de música -->
+            <div class="music-player">
+                <div class="player-icon" (click)="togglePlayer()">
+                    <i class='bx' [ngClass]="isPlaying ? 'bx-pause' : 'bx-music'" id="theme-button"></i>
+                </div>
+                <audio #audioPlayer (ended)="onSongEnd()"></audio>
+            </div>
+
 
             <div class="nav_toggle" id="nav-toggle">
                 <i class="ri-apps-line "></i>
