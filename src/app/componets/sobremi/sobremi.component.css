@@ -92,6 +92,7 @@
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem 0rem 1rem;
+    content-visibility: auto;
 }
 
 .section p {
@@ -297,9 +298,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    overflow: hidden;
-    height: 290px;
-    width: 300px;
+    overflow-y: auto;
+    /* height: 290px; */
+    margin-bottom: 50px;
+    width: 270px;
     opacity: 0;
     transform: translateY(30px);
     transition-delay: .3s;
@@ -318,9 +320,8 @@
     text-align: center;
     position: relative;
     font-weight: 800;
-    top: 15px;
-    left: -43px;
     font-size: 20px;
+
 }
 
 .description.c1 p:hover {
@@ -328,8 +329,7 @@
 }
 
 .description.c2 p {
-    top: 15px;
-    left: -43px;
+
     color: transparent;
     margin-top: 34px !important;
     text-align: center;
@@ -343,8 +343,7 @@
 }
 
 .description.c3 p {
-    top: 15px;
-    left: -43px;
+
     color: transparent;
     margin-top: 34px !important;
     text-align: center;
@@ -358,8 +357,7 @@
 }
 
 .description.c4 p {
-    top: 15px;
-    left: -43px;
+
     color: transparent;
     margin-top: 34px !important;
     text-align: center;
