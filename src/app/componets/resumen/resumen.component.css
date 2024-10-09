@@ -1209,7 +1209,7 @@ img {
 
     .container3 {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         row-gap: 80px;
         column-gap: 50px;
 

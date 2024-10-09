@@ -299,7 +299,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     overflow-y: auto;
-    /* height: 290px; */
     margin-bottom: 50px;
     width: 270px;
     opacity: 0;
@@ -313,6 +312,31 @@
 }
 
 
+/* Cambia el ancho de la barra de desplazamiento */
+.card>.row>.description::-webkit-scrollbar {
+    width: 6px;
+    /* Ajusta el tamaño a tu gusto */
+}
+
+/* Estilo del track (fondo de la barra) */
+.card>.row>.description::-webkit-scrollbar-track {
+    background: transparent;
+    /* Lo hace transparente */
+}
+
+/* Estilo del thumb (la parte de la barra que se desplaza) */
+.card>.row>.description::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Un color blanco semi-transparente */
+    border-radius: 10px;
+    /* Hace las esquinas redondeadas */
+}
+
+/* Opcional: Cambiar el estilo del thumb al pasar el cursor */
+.card>.row>.description::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Más visible al hacer hover */
+}
 
 .description.c1 p {
     color: transparent;
