@@ -177,12 +177,13 @@
 .nav_btns {
     display: flex;
     align-items: center;
+    gap: 15px;
+
 }
 
 .change-theme {
     font-size: 1.25rem;
     color: var(--title-color);
-    margin-right: 1rem;
     cursor: pointer;
 }
 
